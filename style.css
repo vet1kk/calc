@@ -1,0 +1,108 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-image: url("fon-formuly-zakony-znaki.jpg");
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.action, .number {
+    display: flex;
+    padding: 6px;
+    margin: 6px;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+    max-height: 80px;
+    border-radius: 10px;
+    box-shadow: 2px 1px 8px 0 black;
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: bold;
+    flex: 1;
+}
+
+.action:hover, .number:hover {
+    box-shadow: 3px 2px 8px 0 black;
+}
+
+
+.action:active, .number:active {
+    box-shadow: none;
+}
+
+.action {
+    background: gainsboro;
+}
+
+.number {
+    background: aliceblue;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+#output {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid lightsteelblue;
+    background: ghostwhite;
+    display: flex;
+    padding: 6px 16px;
+    margin: 6px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 1px 1px gray;
+    font-family: sans-serif;
+    text-align: right;
+    font-size: 26px;
+    font-weight: bold
+}
+
+.row.error {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row.error:after {
+    content: 'Incorrect input';
+    position: absolute;
+    font-size: 30px;
+    color: red;
+    z-index: 100;
+    padding: 8px;
+    opacity: 0.3;
+    background: ghostwhite;
+    border-radius: 4px;
+}
+
+.row.error #output {
+    box-shadow: 0 0 1px 1px red;
+}
+
+
+#main {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    padding: 16px;
+    box-shadow: 0 0 48px white;
+    border-radius: 10px;
+    background-color: #8f8f8f;
+}
